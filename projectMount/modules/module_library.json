@@ -1,0 +1,253 @@
+{
+  "version": "1.0",
+  "modules": [
+    {
+      "id": "mod_murphy_bed",
+      "name": "墨菲翻折床1500",
+      "tags": ["sleep", "multipurpose"],
+      "functions": ["sleep", "relax"],
+      "size": { "width": 1600, "depth": 400 },
+      "deployedSize": { "width": 1600, "depth": 2100 },
+      "agent_config": {
+        "morphology": { "strategy": "fixed" },
+        "topology_rules": [
+          "【必须】收起态贴墙（柜体深度 400mm）；展开态向房间内伸出至 2100mm，bounds 按展开态算",
+          "【必须】展开态前方至少预留 600mm 下床净空，且不得压住主通道",
+          "【必须】严格避让门的开启扇区域"
+        ],
+        "relation_rules": [
+          "【建议】墨菲床区与休闲区时分复用：白天收起做休闲/工作，夜间放下做睡眠——软分区必须显式声明该复用关系",
+          "【提示】床头侧用壁挂搁板替代独立床头柜，节省地面"
+        ]
+      },
+      "description": "翻折床，收起后腾出地面实现时分复用",
+      "svgPath": "assets/mod_murphy_bed.svg"
+    },
+    {
+      "id": "mod_sofa_bed",
+      "name": "沙发床1900",
+      "tags": ["relax", "sleep", "multipurpose"],
+      "functions": ["relax", "sleep"],
+      "size": { "width": 1900, "depth": 900 },
+      "deployedSize": { "width": 1900, "depth": 1300 },
+      "agent_config": {
+        "morphology": { "strategy": "fixed" },
+        "topology_rules": [
+          "【建议】背靠墙或背朝其他功能区作软隔断；展开态向前伸至 1300mm",
+          "【建议】正面留 ≥ 500mm 起身/展开净空"
+        ],
+        "relation_rules": [
+          "【建议】坐卧两用，适合休闲区与临时睡眠共享同一块地面"
+        ]
+      },
+      "description": "坐卧两用沙发床",
+      "svgPath": "assets/mod_sofa_bed.svg"
+    },
+    {
+      "id": "mod_sofa_2seat",
+      "name": "双人沙发1500",
+      "tags": ["relax"],
+      "functions": ["relax"],
+      "size": { "width": 1500, "depth": 850 },
+      "agent_config": {
+        "morphology": { "strategy": "fixed" },
+        "topology_rules": [
+          "【建议】背靠墙或背朝功能区作软隔断"
+        ],
+        "relation_rules": [
+          "【建议】与茶几/边几功能对位组成休闲组"
+        ]
+      },
+      "description": "紧凑双人沙发",
+      "svgPath": "assets/mod_sofa_2seat.svg"
+    },
+    {
+      "id": "mod_lift_table",
+      "name": "升降餐工两用桌",
+      "tags": ["dine", "work", "multipurpose"],
+      "functions": ["dine", "work"],
+      "size": { "width": 1200, "depth": 700 },
+      "agent_config": {
+        "morphology": { "strategy": "fixed" },
+        "topology_rules": [
+          "【建议】靠窗放置蹭自然光，或居中作餐区核心",
+          "【必须】至少一侧留 ≥ 700mm 起身/拉椅净空"
+        ],
+        "relation_rules": [
+          "【建议】餐桌兼工作台——餐区与工作区共享同一桌面，软分区声明为共享关系"
+        ]
+      },
+      "description": "可升降高度，餐桌/工作台两用",
+      "svgPath": "assets/mod_lift_table.svg"
+    },
+    {
+      "id": "mod_fold_desk_wall",
+      "name": "壁挂折叠书桌",
+      "tags": ["work", "multipurpose"],
+      "functions": ["work"],
+      "size": { "width": 1000, "depth": 500 },
+      "foldedSize": { "width": 1000, "depth": 150 },
+      "agent_config": {
+        "morphology": { "strategy": "fixed" },
+        "topology_rules": [
+          "【必须】壁挂靠墙；展开态向房间伸出 500mm，收起态仅 150mm",
+          "【建议】靠窗墙安装获得自然光"
+        ],
+        "relation_rules": [
+          "【提示】不用时折起贴墙，腾出地面，与相邻区时分复用"
+        ]
+      },
+      "description": "壁挂式可折叠书桌，深度可收至 150mm",
+      "svgPath": "assets/mod_fold_desk_wall.svg"
+    },
+    {
+      "id": "mod_kitchen_counter",
+      "name": "紧凑厨房台",
+      "tags": ["cook"],
+      "functions": ["cook"],
+      "size": { "width": 1800, "depth": 600 },
+      "agent_config": {
+        "morphology": {
+          "strategy": "parametric",
+          "step": 100,
+          "limits": { "width": [1200, 3000], "depth": [600, 600] }
+        },
+        "topology_rules": [
+          "【必须】靠墙放置，优先沿卫生间外墙的服务带（管线集中）",
+          "【建议】台前留 ≥ 900mm 操作净空（下蹲取物/开柜门）"
+        ],
+        "relation_rules": [
+          "【建议】吊柜到顶配合，台下嵌入式电器，竖向利用"
+        ]
+      },
+      "description": "一字型紧凑厨房台，宽度参数化",
+      "svgPath": "assets/mod_kitchen_counter.svg"
+    },
+    {
+      "id": "mod_bar_counter",
+      "name": "吧台",
+      "tags": ["dine", "divider", "multipurpose"],
+      "functions": ["dine", "work", "divider"],
+      "size": { "width": 1200, "depth": 450 },
+      "agent_config": {
+        "morphology": {
+          "strategy": "parametric",
+          "step": 100,
+          "limits": { "width": [900, 2000], "depth": [400, 600] }
+        },
+        "topology_rules": [
+          "【建议】作开放厨房与休闲区之间的软隔断，背朝其一侧"
+        ],
+        "relation_rules": [
+          "【建议】吧台兼餐区 + 工作台 + 软隔断三用"
+        ]
+      },
+      "description": "吧台，餐/工作/隔断三用",
+      "svgPath": "assets/mod_bar_counter.svg"
+    },
+    {
+      "id": "mod_tall_cabinet",
+      "name": "到顶定制柜",
+      "tags": ["generalStorage", "wardrobeStorage"],
+      "functions": ["storage"],
+      "size": { "width": 800, "depth": 600 },
+      "agent_config": {
+        "morphology": {
+          "strategy": "parametric",
+          "step": 100,
+          "limits": { "width": [400, 2400], "depth": [350, 600] }
+        },
+        "topology_rules": [
+          "【必须】靠墙放置，宽度按可用连续实墙伸缩，吃满不留死角",
+          "【建议】避让窗墙（高柜遮光）"
+        ],
+        "relation_rules": [
+          "【建议】竖向到顶收纳，把地面留给活动"
+        ]
+      },
+      "description": "到顶定制储物柜，宽度/进深参数化",
+      "svgPath": "assets/mod_tall_cabinet.svg"
+    },
+    {
+      "id": "mod_shoe_cabinet_slim",
+      "name": "薄鞋柜",
+      "tags": ["generalStorage"],
+      "functions": ["storage"],
+      "size": { "width": 800, "depth": 350 },
+      "agent_config": {
+        "morphology": {
+          "strategy": "parametric",
+          "step": 100,
+          "limits": { "width": [400, 1200], "depth": [300, 400] }
+        },
+        "topology_rules": [
+          "【必须】靠墙；放在入口过渡区"
+        ],
+        "relation_rules": [
+          "【建议】玄关过渡区收纳，深度薄不挤动线"
+        ]
+      },
+      "description": "入口薄鞋柜",
+      "svgPath": "assets/mod_shoe_cabinet_slim.svg"
+    },
+    {
+      "id": "mod_wall_shelf",
+      "name": "壁挂搁板",
+      "tags": ["generalStorage", "multipurpose"],
+      "functions": ["storage"],
+      "size": { "width": 800, "depth": 250 },
+      "agent_config": {
+        "morphology": {
+          "strategy": "parametric",
+          "step": 100,
+          "limits": { "width": [400, 1500], "depth": [200, 300] }
+        },
+        "topology_rules": [
+          "【必须】壁挂离地，不占地面（bounds 表示其墙面投影）"
+        ],
+        "relation_rules": [
+          "【建议】替代床头柜/落地矮柜，竖向储物"
+        ]
+      },
+      "description": "壁挂搁板，竖向储物不占地",
+      "svgPath": "assets/mod_wall_shelf.svg"
+    },
+    {
+      "id": "mod_nesting_stool",
+      "name": "嵌套凳",
+      "tags": ["seating", "multipurpose"],
+      "functions": ["seating"],
+      "size": { "width": 400, "depth": 400 },
+      "agent_config": {
+        "morphology": { "strategy": "fixed" },
+        "topology_rules": [
+          "【提示】不用时收纳到桌下/叠放，属可拆除附属件"
+        ],
+        "relation_rules": [
+          "【建议】配合餐工两用桌/吧台作就座"
+        ]
+      },
+      "description": "可叠放嵌套凳",
+      "svgPath": "assets/mod_nesting_stool.svg"
+    },
+    {
+      "id": "mod_tea_table_fold",
+      "name": "折叠边几",
+      "tags": ["relax", "multipurpose"],
+      "functions": ["relax"],
+      "size": { "width": 500, "depth": 500 },
+      "foldedSize": { "width": 500, "depth": 200 },
+      "agent_config": {
+        "morphology": { "strategy": "fixed" },
+        "topology_rules": [
+          "【提示】可折叠收起，属可拆除附属件"
+        ],
+        "relation_rules": [
+          "【建议】替代固定茶几，与沙发组成休闲组"
+        ]
+      },
+      "description": "可折叠边几，替代固定茶几",
+      "svgPath": "assets/mod_tea_table_fold.svg"
+    }
+  ]
+}

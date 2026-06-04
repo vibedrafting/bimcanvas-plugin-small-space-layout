@@ -1,0 +1,44 @@
+{
+  "$schema": "../../bimcanvas/docs/plugin-manifest-schema.json",
+
+  "name": "small-space-layout",
+  "version": "0.1.0",
+  "compatibility": { "bimcanvas": "^1.0.0" },
+
+  "displayName": "🏠 小空间布局",
+  "description": "BIMCanvas 小空间布局 domain plugin：开放主间的功能软分区 + 空间效率评估 + 户型标准化复制全工作流，配套多用途家具库与设计规则。适用 studio / 微公寓 / 公寓酒店 / 长租 loft 等小开放空间。",
+
+  "tools": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Glob",
+      "Grep",
+      "Task",
+      "Skill",
+      "AskUserQuestion",
+      "mcp__canvas__request_background_screenshot",
+      "mcp__canvas__register_variant",
+      "mcp__canvas__list_variants",
+      "mcp__canvas__analyze_image",
+      "mcp__canvas__create_job",
+      "mcp__canvas__complete_job",
+      "mcp__canvas__list_project_scenes",
+      "mcp__canvas__load_scene_artifact",
+      "mcp__canvas__validate_layout",
+      "mcp__spacepack__get_open_space",
+      "mcp__spacepack__save_design_plan",
+      "mcp__spacepack__load_design_plan",
+      "mcp__spacepack__evaluate_efficiency",
+      "mcp__spacepack__save_unit_type",
+      "mcp__spacepack__load_unit_type",
+      "mcp__spacepack__check_unit_consistency"
+    ],
+    "deny": []
+  },
+  "agents": { "allow": [], "deny": [] },
+
+  "defaultSceneIdPattern": "small-space-{n}"
+}

@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "items": [
+    {
+      "name": "modules",
+      "target": "modules",
+      "type": "directory",
+      "enabled": true,
+      "description": "小空间多用途家具模块库（module_library.json + SVG）"
+    },
+    {
+      "name": "",
+      "target": "references",
+      "type": "empty-directory",
+      "enabled": true,
+      "description": "项目级运行时参考规则目录"
+    },
+    {
+      "name": "references/small_space_principles.md",
+      "target": "references/small_space_principles.md",
+      "type": "template",
+      "enabled": true,
+      "description": "项目级：小空间通用设计原则"
+    },
+    {
+      "name": "references/soft_zoning.md",
+      "target": "references/soft_zoning.md",
+      "type": "template",
+      "enabled": true,
+      "description": "项目级：功能软分区模型"
+    },
+    {
+      "name": "references/space_efficiency.md",
+      "target": "references/space_efficiency.md",
+      "type": "template",
+      "enabled": true,
+      "description": "项目级：空间效率评估 rubric"
+    },
+    {
+      "name": "references/standardization.md",
+      "target": "references/standardization.md",
+      "type": "template",
+      "enabled": true,
+      "description": "项目级：户型标准化与复制指引"
+    },
+    {
+      "name": "references/furniture_rules.md",
+      "target": "references/furniture_rules.md",
+      "type": "template",
+      "enabled": true,
+      "description": "项目级：小空间家具选品规则"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<svg viewBox="0 0 1900 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .main-lines { fill: none; stroke: #000000; stroke-width: 25; stroke-linecap: round; stroke-linejoin: round; }
+      .detail-lines { fill: none; stroke: #000000; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+      .fine-lines { fill: none; stroke: #000000; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect x="13" y="13" width="1874" height="874" class="main-lines" />
+  <rect x="114" y="54" width="1672" height="792" rx="45" class="detail-lines" />
+  <rect x="228" y="126" width="608" height="270" rx="30" class="fine-lines" />
+  <rect x="1064" y="126" width="608" height="270" rx="30" class="fine-lines" />
+  <text x="950" y="504" font-size="288" text-anchor="middle" fill="#000">沙发床</text>
+</svg>

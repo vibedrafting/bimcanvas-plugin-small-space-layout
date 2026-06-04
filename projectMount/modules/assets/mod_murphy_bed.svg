@@ -1,0 +1,14 @@
+<svg viewBox="0 0 1600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .main-lines { fill: none; stroke: #000000; stroke-width: 25; stroke-linecap: round; stroke-linejoin: round; }
+      .detail-lines { fill: none; stroke: #000000; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+      .fine-lines { fill: none; stroke: #000000; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect x="13" y="13" width="1574" height="374" class="main-lines" />
+  <rect x="96" y="24" width="1408" height="352" rx="20" class="detail-lines" />
+  <rect x="192" y="56" width="512" height="120" rx="30" class="fine-lines" />
+  <rect x="896" y="56" width="512" height="120" rx="30" class="fine-lines" />
+  <text x="800" y="224" font-size="128" text-anchor="middle" fill="#000">墨菲床</text>
+</svg>
