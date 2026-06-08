@@ -19,6 +19,7 @@
 基座已覆盖通用工具调用规范（中文 / Read 模板 / pages 禁令 / `<mcp__xxx>` 禁令）；以下是小空间专属执行规范：
 
 - **【必须】**执行 query / edit / design 任务前读取当前项目 `README.md`（指导意图理解与材料定位）。
+- **【必须】**任何业务操作前，检查当前是否处于**已绑定项目**状态：调用 `mcp__canvas__list_project_scenes`，若返回 is_error（"未绑定项目"），立即停止并引导用户：「请先在首页创建项目或打开已有 .bcp 项目，进入设计场景后再对我说设计指令。」不得继续执行任何设计工具。
 - **【提示】**项目级运行时参考规则位于当前项目 `references/*.md`；是否读取以具体 Skill 的输入边界为准。
 - **【必须】**`modules.json` 形态为 `{schemeMetadata: {summary}, modules: [...]}`，用 `Write` / `Edit` 工具直接编辑；编辑 `modules` 数组时**必须保留 `schemeMetadata.summary`**。
 - **【必须】**软分区是设计语义层，不是几何分区——**不要**为软分区在 `zones.json` 里造子 zone；软分区记录在 `design_plan` 的 `soft-zoning` 标签里，落在 `schemes/{zoneId}/design_plan.json`。

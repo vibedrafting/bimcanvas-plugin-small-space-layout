@@ -248,6 +248,98 @@
       },
       "description": "可折叠边几，替代固定茶几",
       "svgPath": "assets/mod_tea_table_fold.svg"
+    },
+    {
+      "id": "mod_tv_wall",
+      "name": "壁挂电视55寸",
+      "tags": ["media", "multipurpose"],
+      "functions": ["media"],
+      "size": { "width": 1240, "depth": 80 },
+      "agent_config": {
+        "morphology": {
+          "strategy": "parametric",
+          "step": 100,
+          "limits": { "width": [800, 1600], "depth": [80, 80] }
+        },
+        "topology_rules": [
+          "【必须】贴墙挂装，深度仅 80mm，不占地面面积",
+          "【必须】正面留 ≥ 2000mm 观看净距（从电视面到沙发前缘）",
+          "【建议】与沙发/沙发床形成媒体组，声明为 adjacent 关系"
+        ],
+        "relation_rules": [
+          "【建议】壁挂电视定义「媒体墙」——作为休闲区的主锚点，沙发朝向由此确定",
+          "【提示】小空间不建议加电视柜，改用壁挂搁板（mod_wall_shelf）放置周边设备"
+        ]
+      },
+      "description": "壁挂式电视，仅占墙面，地面净空留给动线与沙发",
+      "svgPath": "assets/mod_tv_wall.svg"
+    },
+    {
+      "id": "mod_compact_fridge",
+      "name": "嵌入式冰箱",
+      "tags": ["cook", "appliance"],
+      "functions": ["cook"],
+      "size": { "width": 600, "depth": 600 },
+      "agent_config": {
+        "morphology": {
+          "strategy": "parametric",
+          "step": 50,
+          "limits": { "width": [550, 700], "depth": [600, 600] }
+        },
+        "topology_rules": [
+          "【必须】紧靠厨房台面或嵌入柜列末端，形成连续服务带",
+          "【必须】开门侧（通常右侧）留 ≥ 300mm 操作净空",
+          "【建议】背靠实墙或柜体，不独立悬浮"
+        ],
+        "relation_rules": [
+          "【建议】与 mod_kitchen_counter 声明为 adjacent，共同构成烹饪功能带",
+          "【提示】冰箱是厨房区最大固定点，先定位冰箱再规划台面延伸方向"
+        ]
+      },
+      "description": "嵌入式紧凑冰箱，厨房打包时的固定锚点",
+      "svgPath": "assets/mod_compact_fridge.svg"
+    },
+    {
+      "id": "mod_work_chair",
+      "name": "折叠工作椅",
+      "tags": ["work", "seating", "multipurpose"],
+      "functions": ["work", "seating"],
+      "size": { "width": 450, "depth": 500 },
+      "foldedSize": { "width": 450, "depth": 100 },
+      "agent_config": {
+        "morphology": { "strategy": "fixed" },
+        "topology_rules": [
+          "【必须】使用态置于书桌前方 ≥ 700mm 净空范围内，不压通道",
+          "【建议】折叠后挂墙或塞入桌下（深 100mm），将地面净空归还给动线"
+        ],
+        "relation_rules": [
+          "【必须】与 mod_fold_desk_wall 或 mod_lift_table 声明为 adjacent",
+          "【建议】工作区闲时椅子折起——软分区中声明为时分复用（与休闲/通道共享地面）"
+        ]
+      },
+      "description": "可折叠工作椅，使用时占 450×500，折叠后仅 100mm 深",
+      "svgPath": "assets/mod_work_chair.svg"
+    },
+    {
+      "id": "mod_washer",
+      "name": "滚筒洗衣机",
+      "tags": ["laundry", "appliance"],
+      "functions": ["laundry"],
+      "size": { "width": 600, "depth": 600 },
+      "agent_config": {
+        "morphology": { "strategy": "fixed" },
+        "topology_rules": [
+          "【必须】贴墙放置，需紧靠水路（厨房服务墙或阳台入口）",
+          "【必须】正面留 ≥ 700mm 开门净空",
+          "【建议】嵌入柜列末端节省视觉体量"
+        ],
+        "relation_rules": [
+          "【建议】与 mod_kitchen_counter 或 mod_tall_cabinet 声明为 adjacent；独立放置时优先靠服务墙",
+          "【提示】洗衣机位置由水路约束固定，先定位再规划周边"
+        ]
+      },
+      "description": "滚筒洗衣机，公寓酒店/微公寓常嵌入厨房服务带",
+      "svgPath": "assets/mod_washer.svg"
     }
   ]
 }

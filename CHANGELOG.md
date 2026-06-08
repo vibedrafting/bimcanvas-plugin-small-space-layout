@@ -4,6 +4,17 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-06-04
+
+### Added
+- 模块库扩充（4 个新模块）：
+  - `mod_tv_wall`：壁挂电视（media 功能，parametric 宽度 800–1600mm，深度仅 80mm 不占地面）
+  - `mod_compact_fridge`：嵌入式冰箱（cook 功能，厨房打包固定锚点，parametric 550–700mm）
+  - `mod_work_chair`：折叠工作椅（work + seating + multipurpose，折叠后仅 100mm 深）
+  - `mod_washer`：滚筒洗衣机（laundry 功能，600×600 固定，紧靠水路）
+- 对应 4 个 SVG 平面图资产（`assets/mod_tv_wall.svg` 等）
+- `furniture_rules.md` 更新「工作」「烹饪」条目，新增「休闲/媒体」条目，引用新模块
+
 ### Changed
 - **重命名 + 命名解耦**：仓库 `apartment-hotel` → `small-space-layout`（去业态化，覆盖 studio/微公寓/公寓酒店/loft）。
   manifest `name` / 目录 / `validators/<name>.py` = `small-space-layout`（validator 文件名被平台硬绑为 manifest name）；
